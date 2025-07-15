@@ -14,6 +14,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+a{
+  text-decoration: none;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -234,7 +237,7 @@ body {
 }
 
 /* Mobile view styles */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .about {
     padding: 30px 20px; /* Reduced padding for mobile */
   }
@@ -247,6 +250,18 @@ body {
     padding: 0 10px; /* Optional: add padding to paragraph content */
   }
 }
+  section.about {
+    display: flex;
+    flex-direction: column-reverse; /* Image will come after content */
+     gap: 2rem;
+  }
+
+  .about-img img {
+    width: 90%;
+    margin: 0 auto;
+  } 
+
+
 section.about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -292,7 +307,24 @@ section.about {
   background: var(--accent);
   color:white;
 }
+@media (max-width: 768px) {
+  section.about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 30px 20px;
+  }
 
+  .about-img img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 0 10px;
+  }
+}
 /* ===== Services Section ===== */
 #services {
   background: var(--bg-dark);
@@ -511,6 +543,9 @@ section.about {
   overflow: hidden;
   border-radius: 10px;
  
+}
+.project .portfolio-content .row a{
+  text-decoration: none;
 }
 
 .row img {
@@ -767,4 +802,26 @@ section.contact {
     align-items: center;
   }
   
+}
+@media (max-width: 768px) {
+  section.about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 30px 20px;
+  }
+
+  .about-img img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .about h2 {
+    text-align: center;
+  }
 }
